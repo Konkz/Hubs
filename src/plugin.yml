@@ -1,0 +1,7 @@
+name: Hubs
+main: me.konkz.hubs.Hubs
+author: Konkz
+version: Alpha 1.0
+commands:
+  hub:
+    description: View playerinfo.
