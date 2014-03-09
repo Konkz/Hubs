@@ -24,7 +24,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Hubs extends JavaPlugin implements Listener {
 
-	static Plugin plugin = null;
+	public static Plugin plugin = null;
 	static Logger logger = Logger.getLogger("Minecraft");
 	ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
 
@@ -34,7 +34,10 @@ public class Hubs extends JavaPlugin implements Listener {
 				new ListenerBossBar(), new ListenerNoDmg(), new ListenerDropItem(),
 				new CommandBuild(), new ListenerBuilding(), new ListenerQuitEvent(),
 				new Messages());
-		getCommand("hub").setExecutor(new Cmds());
+		getCommand("hubs").setExecutor(new Cmds());
+		
+		getConfig().options().copyDefaults();
+		saveConfig();
 
 		if (getServer().getPluginManager().getPlugin("BarAPI") == null) {
 			console.sendMessage(ChatColor.RED + "Missing dependency:"

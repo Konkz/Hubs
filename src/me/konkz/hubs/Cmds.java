@@ -26,7 +26,7 @@ public class Cmds implements CommandExecutor, Listener {
 			String alias, String[] args) {
 		Player p = (Player) sender;
 
-		if (alias.equalsIgnoreCase("hub")) {
+		if (alias.equalsIgnoreCase("hubs")) {
 			if (args.length == 0) {
 				p.sendMessage(ms.pn + "Command unknown.");
 			}

@@ -3,5 +3,5 @@ main: me.konkz.hubs.Hubs
 author: Konkz
 version: Alpha 1.0
 commands:
-  hub:
+  hubs:
     description: View playerinfo.
